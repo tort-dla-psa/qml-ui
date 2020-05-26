@@ -2,11 +2,9 @@
 
 Properties::Properties(QObject *parent)
     :QObject(parent)
-{
-}
+{ }
 
-Properties::~Properties(){
-}
+Properties::~Properties(){ }
 const decltype(Properties::props)& Properties::items() const {
     return this->props;
 }
@@ -19,6 +17,7 @@ bool Properties::addItem(unsigned index, const Property &prop) {
         return false;
     }
     props[index] = prop;
+    emit prop_changed(prop);
     return true;
 }
 

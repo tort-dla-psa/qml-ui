@@ -30,6 +30,7 @@ public:
     bool addItem(unsigned index, const Property &prop);
     size_t size()const;
 signals:
+    void prop_changed(Property);
     void pre_append();
     void post_append();
     void pre_remove(unsigned);

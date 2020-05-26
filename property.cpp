@@ -30,10 +30,12 @@ void property::setProps(Properties *value) {
             endRemoveRows();
         });
     }
+    endResetModel();
 }
 
 property::property(QObject *parent)
-    : QAbstractListModel(parent)
+    : QAbstractListModel(parent),
+      m_props(nullptr)
 {}
 
 /*

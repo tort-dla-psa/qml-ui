@@ -1,0 +1,2 @@
+module CustomStyles
+singleton Colors 1.0 colors.qml
